@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Matis Byar</title>
     <link rel="stylesheet" href="resources/styles/styles.css">
+    <link rel="icon" href="resources/images/logo.png">
+    <script type="text/javascript" src="resources/scripts/tabs.js"></script>
 </head>
 <body>
 <header>
@@ -90,11 +92,24 @@
         <section id="experience">
             <h2 class="title">Expérience.</h2>
             <div class="inside">
-                <div class="left">
-                    <p>Voici une liste de mes projets réalisés en cours ou en dehors de l'école.</p>
+                <div class="left tab">
+                    <button class="tablinks" onclick="openExperience(event, 'e1')" id="default">e1</button>
+                    <button class="tablinks" onclick="openExperience(event, 'e2')">e2</button>
+                    <button class="tablinks" onclick="openExperience(event, 'e3')">e3</button>
                 </div>
                 <div class="right">
-
+                    <div id="e1" class="tabcontent">
+                        <h3>Stage de 3ème</h3>
+                        <p>Stage de 3ème dans une entreprise de développement web.</p>
+                    </div>
+                    <div id="e2" class="tabcontent">
+                        <h3>Stage de 4ème</h3>
+                        <p>Stage de 4ème dans une entreprise de développement web.</p>
+                    </div>
+                    <div id="e3" class="tabcontent">
+                        <h3>Stage de 5ème</h3>
+                        <p>Stage de 5ème dans une entreprise de développement web.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -111,6 +126,7 @@
 </main>
 <footer>
     <p>Conçu par Matis Byar</p>
+    <small><a href="en/index.html">English</a></small>
 </footer>
 </body>
 </html>
