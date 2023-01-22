@@ -1,0 +1,577 @@
+/* Fonte */
+@font-face {
+    font-family: "SF Pro";
+    src: url("./font/SF-Pro.ttf");
+}
+
+body{
+    font-family: "SF Pro", "Helvetica", "Arial", "sans-serif";
+    margin : 0px;
+    background: black;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Couleurs */
+#bleuenvironnement, #bleuacteur {
+    background-color: #041725;
+}
+
+#jauneenvironnement, #jauneacteur {
+    background-color: #241904;
+}
+
+#vertenvironnement, #vertacteur {
+    background-color: #081e11;
+}
+
+#rougeenvironnement, #rougeacteur {
+    background-color: #230a0e;
+}
+
+#grisacteur {
+    background-color: #272727;
+}
+
+/* Modification de la mise en page selon la taille d'écran */
+@media(min-width:768px){ /* à partir de 768px */
+    .parties{flex-direction: row;}
+    .burger, p#problematique{display: none;}
+    p.description, h1.titre, p.description-ecologie{max-width: 1000px;}
+    p.soustitre{width: 90%}
+    div.gauche, div.droite{width: 50%;}
+    h2{font-size: 48px; line-height: 56px;}
+    div.acteurs{min-width: 500px;}
+    div.partieacteurs{flex-direction: row}
+    div.liensfooter{display: flex}
+    div#antoine img, div#gaetan img, div#matis img, div#tania img{width: 75%;}
+}
+
+@media(max-width:767px){ /* en dessous de 768px */
+    .parties{flex-direction: column; align-items: center;}
+    nav.navbar a, div.liensfooter, img.icone{display: none;}
+    .titredescription{padding-top: 5%; padding-bottom: 5%;}
+    p.soustitre, div#antoine img, div#gaetan img, div#matis img, div#tania img{width: 100%;}
+    div.gauche, div.droite{width: 100%;}
+    h2{font-size: 30px; line-height: normal;}
+    img.imgaccomp{padding-top: 5px;}
+    div.partieacteurs, .alignement{flex-direction: column;}
+    div.footer ol{width: 90%;}
+    #fleche{display: none; position: fixed;}
+    .validation{align-items: center}
+    .contact, div.connaissance>div{flex-direction: row;}
+}
+
+@media(max-width:365px){ /* en dessous de 365px */
+    p#problematique, p.soustitre{display: none;}
+}
+
+/* Retour au début */
+#fleche{
+    position: fixed;
+    bottom: 2%; 
+    right: 2%; 
+    border-radius: 20px; 
+    background-color: white; 
+    color: black; 
+    font-weight: 200;
+}
+
+#fleche:hover{
+    background-color: transparent;
+    color: white;
+    border: solid white 1px;    
+}
+
+/* Barre de navigation */
+.navbar {
+    background-color: #000001;
+    display: flex;
+    justify-content: space-evenly;
+    height: 44px;
+}
+
+.navbar a, .burger a, div#nav a{
+    display: flex;
+    padding: 10px;
+    color: #f5f5f7;
+    font-weight: lighter;
+    text-decoration: none;
+    font-size: 15px;
+    opacity: 0.8;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.navbar div.titreverssousmenu {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.navbar a:hover, .burger a:hover, div.footer a:hover, div#nav a:hover{
+    opacity: 1;
+}
+
+.navbar a.selected-ecolo:hover, .burger a.selected-ecolo:hover{
+    color: rgb(3, 189, 3);
+}
+
+div.footer a:hover{
+    text-decoration: underline;
+}
+
+.burger {
+    position: absolute;
+    background-color: #000001;
+}
+
+#icone {
+    width: 20px;
+    height: 20px;
+    padding: 10px 10px;
+}
+
+div#menuburger, div.sousmenu {
+    display: none;
+}
+
+div:hover #menuburger{
+    display: flex;
+    flex-direction: column;
+    background-color: #000001;
+}
+
+div:hover .sousmenu{
+    display: flex;
+    flex-direction: column;  
+    background-color: #000001; 
+    position: absolute;
+    top: 37px;
+}
+
+#problematique {
+    margin: auto;
+    padding: 10px;
+    color: #f5f5f7;
+    font-weight: lighter;
+    text-decoration: none;
+    font-size: 12px;
+    opacity: 0.8;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Titre et description */
+.titredescription {
+    background-image: url("./images/Fond-Accueil.jpeg");
+}
+
+p.description{
+    font-size: 20px;
+    margin: auto;
+    padding-bottom: 15px;
+    text-align: justify;
+    font-weight: 100;
+}
+
+h1.titre{
+    font-size: 40px;
+    padding: 15px 15px 0px 15px;
+    margin: auto;
+    font-weight: 700;
+}
+
+p.description-ecologie{
+    font-size: 20px;
+    margin: auto;
+    text-align: justify;
+    font-weight: 100;
+}
+
+p.description-ecologie:last-child{
+    padding-bottom: 15px;
+}
+
+/* Styles */
+h1{
+    font-weight: bold;
+}
+
+h2{
+    margin: 0px;
+    margin-right: 5px;
+    font-size: 32px;
+}
+
+p{
+    margin: 0px;
+    padding: 0px 20px;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: justify;
+}
+
+sup, sup>a{
+    font-weight: 300;
+    line-height: 0;
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    font-size: 12px;
+    line-height: 1.33;
+    font-weight: 400;
+}
+
+ol{
+    width: 50%;
+    margin: auto;
+    padding: 10px; 
+}
+
+label{
+    font-weight: 1;
+}
+
+/* Séparations */
+div.separation{
+    width:75%;
+    margin: auto;
+    text-align: center;
+    font-weight: bolder;
+}
+
+div.separation h1{
+    padding: 10px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+/* Pour mettre les paragraphes en place */
+.texte{
+    width: 85%;
+    margin: auto;
+}
+
+.texte p{
+    line-height: 27px;
+    font-weight: 100
+}
+
+/* mise en place des images et calibrage */
+#image-islande, #image-pollution, #image-gafam{
+    display: flex;
+}
+
+#image-islande{
+    height: 100%;
+    width: 75%;
+}
+
+#image-pollution{
+    height: 75%;
+    width: 75%;
+}
+
+#image-gafam{
+    height: 100%;
+    width: 75%;
+}
+
+.texte img{
+    margin: auto;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.texte p{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/* Pour mettre les vidéos au milieu */
+iframe{
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 60%;
+    border: none;
+}
+
+/* Blocs explicatifs */
+.parties{
+    display: flex;
+    padding: 15px;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 50px;
+    width: 85%;
+}
+
+div.gauche{
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 5px;
+}
+
+div.droite{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.nombre, .acteur, .nombrepol{
+    font-size: 60px;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Times New Roman', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+}
+
+div.parties p{
+    margin: 0px;
+    padding: 0px
+}
+
+p.soustitre {
+    font-size: 17px;
+    text-align: justify;
+    line-height: 27px;
+    margin: auto;
+    font-weight: 100;
+}
+
+a.lienparties:hover{
+    opacity: 1;
+}
+
+img.imgaccomp{
+    width: 100%;
+    border-radius: 25px;
+}
+
+div#bleu.parties{
+    margin-top: 50px;
+}
+
+/* Acteurs */
+div.partieacteurs{
+    display: flex;
+    margin-top: 50px;
+    overflow: auto;
+}
+
+div.acteurs{
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 20px;
+    padding: 15px;
+    border-radius: 30px;
+}
+
+.acteur{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* NE PAS CONFONDRE : la classe "acteurs" (pluriel) qui correspond au bloc contenant UN acteur AVEC la classe "acteur' (singulier) qui correspond au nom de l'acteur */
+
+p.soustitreacteurs{
+    font-size: 17px;
+    text-align: justify;
+    line-height: 27px;
+    padding-left: 0;
+}
+
+div.haut{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 10px
+}
+
+img#meta.icone{
+    width: 135px;
+    height: 100px;
+}
+
+img#google.icone, img#apple.icone, img#amazon.icone, img#microsoft.icone{
+    width: 100px;
+    height: 100px;
+}
+
+/* Footer */
+div.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(39, 39, 39);
+    color: #D2D2D7;
+    padding: 15px;
+    margin-top: 100px;
+}
+
+div.footer#bibliographies{
+    flex-direction: column;
+}
+
+div.liensfooter{
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    padding-top: 10px;
+}
+
+div.liensfooter a{
+    border-left: 1px solid #D2D2D7;
+}
+
+div.liensfooter a:first-child{
+    border-left: none;
+}
+
+p.footer{
+    display: flex;
+    justify-content: center;
+    padding: 0 10px 10px 10px;
+    font-size: 100%;
+}
+
+div.footer ol{
+    border-top: 1px solid #c7c5c5;
+    border-bottom: 1px solid #c7c5c5;
+}
+
+.footer a{
+    color: #c7c5c5;
+    font-weight: lighter;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+/* Page de Contact */
+.contact{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input, .contact textarea{
+    border-radius: 25px;
+    padding: 5px;
+}
+
+input::placeholder, textarea::placeholder{
+    text-align: center;
+}
+
+.personnel, .connaissance, .recontact{
+    padding-bottom: 10px;
+}
+
+input#libre{
+    width: 85%;
+}
+
+.validation{
+    padding-top: 10px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.submit{
+    position: relative;
+    display: flex;
+    width: 200px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #1c89ff;
+    border: solid 1px transparent;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit:hover{
+    border-color: #fff;
+    background-color: transparent;
+}
+
+.enfantpersonnelgauche, .enfantpersonneldroite{
+    width: 100%;
+}
+
+.enfantpersonnelgauche input, .enfantpersonneldroite input{
+    width: 45%;
+}
+
+p.soustitre-apropos{
+    width: 90%;
+}
+
+p.soustitre-apropos>a{
+    color: white;
+    text-decoration: none;
+}
+
+p.soustitre-apropos>a:hover{
+    text-decoration: underline;
+}
+
+#antoine, #gaetan, #matis, #tania{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Légal */
+.alignement{
+    display: flex;
+}
+
+.alignement img{
+    margin-top: auto;
+    margin-left: auto;
+}
+
+/* Politique et Social */
+.pol {
+   text-align: center;
+}
+
+p.nombrepol{
+    text-align: center;
+}
+
+div.separation p{
+    padding: 10px;
+    border-top: 2px solid white;
+}
+
+#GafamPhotoPolitique{
+    width: 50%;
+    margin-left: 24%;
+}
+
+div.texte p{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: justify;
+}
+
+div.gauche p{
+    padding-right: 20px;    
+}
+
+div.droite p{
+    padding-left: 20px;
+}
