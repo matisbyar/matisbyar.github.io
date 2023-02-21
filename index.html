@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Matis Byar</title>
-    <link rel="stylesheet" href="resources/styles/styles.css">
     <link rel="icon" href="resources/images/logo.png">
+    <link href="resources/styles/output.css" rel="stylesheet">
+    <link href="resources/styles/styles.css" rel="stylesheet">
     <script type="text/javascript" src="resources/scripts/tabs.js"></script>
 </head>
 <body>
 <header>
+    <div class="in-construction">
+        <p>Mon site portfolio est en construction... Revenez plus tard ! <a href="https://www.linkedin.com/in/matisbyar">Voici mon LinkedIn</a>.</p>
+    </div>
     <nav>
         <div class="logo">
             <a href="index.html">
@@ -18,7 +22,7 @@
         <div>
             <div class="links">
                 <a href="#apropos">À propos</a>
-                <a href="#experience">Expérience</a>
+                <a href="#projets">Projets</a>
                 <a href="#contact">Contact</a>
             </div>
             <button><a href="resources/CV-Byar-Matis.pdf">CV</a></button>
@@ -34,7 +38,7 @@
                 </a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/in/matisbyar/">
+                <a href="https://www.linkedin.com/in/matisbyar">
                     <img src="resources/images/linkedin.png" alt="Linkedin">
                 </a>
             </li>
@@ -93,29 +97,150 @@
             <h2 class="title">Expérience.</h2>
             <div class="inside">
                 <div class="left tab">
-                    <button class="tablinks" onclick="openExperience(event, 'e1')" id="default">e1</button>
-                    <button class="tablinks" onclick="openExperience(event, 'e2')">e2</button>
-                    <button class="tablinks" onclick="openExperience(event, 'e3')">e3</button>
+                    <button class="tablinks" onclick="openExperience(event, 'e1')" id="default">1</button>
+                    <button class="tablinks" onclick="openExperience(event, 'e2')">2</button>
                 </div>
                 <div class="right">
-                    <div id="e1" class="tabcontent">
-                        <h3>Stage de 3ème</h3>
-                        <p>Stage de 3ème dans une entreprise de développement web.</p>
+                    <div id="e1" class="tab-content">
+                        <h3>Encore en cours de travaux !</h3>
+                        <p>...</p>
                     </div>
-                    <div id="e2" class="tabcontent">
-                        <h3>Stage de 4ème</h3>
-                        <p>Stage de 4ème dans une entreprise de développement web.</p>
-                    </div>
-                    <div id="e3" class="tabcontent">
-                        <h3>Stage de 5ème</h3>
-                        <p>Stage de 5ème dans une entreprise de développement web.</p>
+                    <div id="e2" class="tab-content">
+                        <h3>Prochainement !</h3>
+                        <p>Je travaille encore sur cette partie.</p>
                     </div>
                 </div>
             </div>
         </section>
+        <section id="projets">
+            <h2 class="title">Projets sur lesquels j'ai travaillé.</h2>
+            <ul class="projects-list">
+                <li>
+                    <div class="project-content">
+                        <div>
+                            <p class="project-overline">À l'affiche</p>
+                            <h3 class="project-title"><a href="">Projet 1</a></h3>
+                            <div class="project-description">
+                                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>Tech 1</li>
+                                <li>Tech 2</li>
+                                <li>Tech 3</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/matisbyar/SAE-1.06">Github</a>
+                                <a href="projets/gafam/index.html">Voir le projet</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <a href="projets/gafam/index.html"><img src="resources/images/project-gafam.png" alt="Image de la page d'accueil sur une recherche documentaire sur le modèle économique des GAFAM"></a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="project-content">
+                        <div>
+                            <p class="project-overline">À l'affiche</p>
+                            <h3 class="project-title"><a href="">Projet 2</a></h3>
+                            <div class="project-description">
+                                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>Tech 1</li>
+                                <li>Tech 2</li>
+                                <li>Tech 3</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://gitlabinfo.iutmontp.univ-montp2.fr/byarm/projet1">Voir le projet</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="resources/images/project-gafam.png" alt="Projet 1">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="project-content">
+                        <div>
+                            <p class="project-overline">À l'affiche</p>
+                            <h3 class="project-title"><a href="">Projet 2</a></h3>
+                            <div class="project-description">
+                                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>Tech 1</li>
+                                <li>Tech 2</li>
+                                <li>Tech 3</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://gitlabinfo.iutmontp.univ-montp2.fr/byarm/projet1">Voir le projet</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="resources/images/project-gafam.png" alt="Projet 1">
+                    </div>
+                </li>
+            </ul>
+
+
+            <ul class="projects-list-mobile">
+                <li>
+                    <div class="project-content-mobile">
+                        <div>
+                            <p class="project-overline-mobile">À l'affiche</p>
+                            <h3 class="project-title-mobile"><a href="">Projet 1</a></h3>
+                            <div class="project-description-mobile">
+                                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <ul class="project-tech-list-mobile">
+                                <li>Tech 1</li>
+                                <li>Tech 2</li>
+                                <li>Tech 3</li>
+                            </ul>
+                            <div class="project-links-mobile">
+                                <a href="https://github.com/matisbyar/SAE-1.06">Github</a>
+                                <a href="projets/gafam/index.html">Voir le projet</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-image-mobile">
+                        <a href="projets/gafam/index.html"><img src="resources/images/project-gafam.png" alt="Image de la page d'accueil sur une recherche documentaire sur le modèle économique des GAFAM"></a>
+                    </div>
+                </li>
+
+
+                <li>
+                    <div class="project-content-mobile">
+                        <div>
+                            <p class="project-overline-mobile">À l'affiche</p>
+                            <h3 class="project-title-mobile"><a href="">Projet 1</a></h3>
+                            <div class="project-description-mobile">
+                                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <ul class="project-tech-list-mobile">
+                                <li>Tech 1</li>
+                                <li>Tech 2</li>
+                                <li>Tech 3</li>
+                            </ul>
+                            <div class="project-links-mobile">
+                                <a href="https://github.com/matisbyar/SAE-1.06">Github</a>
+                                <a href="projets/gafam/index.html">Voir le projet</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-image-mobile">
+                        <a href="projets/gafam/index.html"><img src="resources/images/project-gafam.png" alt="Image de la page d'accueil sur une recherche documentaire sur le modèle économique des GAFAM"></a>
+                    </div>
+                </li>
+            </ul>
+        </section>
         <section id="contact">
             <h2 class="title">Contact.</h2>
-            <p>Contactez-moi !</p>
+            <p class="hover:red">Contactez-moi !</p>
         </section>
     </div>
     <div class="right-container">

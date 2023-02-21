@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
     font-family: Basis;
     src: url(../fonts/BasisGrotesqueMonoPro-Regular.ttf) format('ttf');
@@ -155,12 +159,24 @@ html {
         display: none;
     }
 
-    .projects-list-mobile {
-        display: block;
+    #apropos > div.inside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .projects-list {
         display: none;
+    }
+
+    .projects-list-mobile {
+        display: block;
+    }
+
+    .projects-list-mobile > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -437,7 +453,6 @@ ul.socials:after {
 }
 
 /* MAIN CONTENT */
-
 section {
     padding-right: 0;
     margin: auto;
@@ -507,15 +522,23 @@ ul.skills-list li:before {
     line-height: 12px;
 }
 
+.right > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* EXPERIENCE */
+
+section#experience {
+    display: none;
+}
+
 #experience .inside {
     display: flex;
     margin: auto;
     justify-content: center;
-}
-
-/* EXPERIENCE */
-section#experience {
-    display: none;
 }
 
 .tab {
@@ -547,7 +570,7 @@ section#experience {
     background-color: #ccc;
 }
 
-.tabcontent {
+.tab-content {
     display: none;
     float: left;
     padding: 0 12px;
@@ -563,7 +586,7 @@ section#experience {
 
 /* PROJETS */
 
-.projects-list {
+.projects-list, .projects-list-mobile {
     list-style-image: initial;
     list-style-type: none;
     padding-top: 0;
@@ -584,7 +607,7 @@ section#experience {
     align-items: center;
 }
 
-.projects-list li:not(:last-of-type) {
+.projects-list li:not(:last-of-type), .projects-list-mobile > li:not(:last-of-type) {
     margin-bottom: 100px;
 }
 
@@ -602,7 +625,7 @@ section#experience {
     text-align: right;
 }
 
-.projects-list li .project-overline {
+.projects-list li .project-overline, .projects-list-mobile li .project-overline-mobile {
     margin: 10px 0 0 0;
     color: var(--red);
     font-family: var(--font-mono);
@@ -610,12 +633,13 @@ section#experience {
     font-weight: 400;
 }
 
-.projects-list li .project-title {
+.projects-list li .project-title, .projects-list-mobile li .project-title-mobile {
     color: var(--lightest-slate);
     font-size: clamp(24px, 5vw, 28px);
+    margin: 0;
 }
 
-.projects-list li .project-title a {
+.projects-list li .project-title a, .projects-list-mobile li .project-title-mobile a {
     position: relative;
     z-index: 1;
     margin-bottom: 10px;
@@ -672,13 +696,22 @@ section#experience {
     align-items: center;
     position: relative;
     margin-top: 10px;
+    color: var(--lightest-slate);
 }
 
 .projects-list li:nth-of-type(2n+1) .project-links {
     -webkit-box-pack: end;
     justify-content: flex-end;
     margin-left: 0;
-    color: var(--lightest-slate);
+
+}
+
+.projects-list li .project-links a {
+    margin: 0 20px 5px 0;
+}
+
+.projects-list li:nth-of-type(2n+1) .project-links a {
+    margin: 0 0 5px 20px;
 }
 
 .projects-list li .project-image {
@@ -732,6 +765,36 @@ section#experience {
     padding-left: 0;
 }
 
+.projects-list-mobile > li {
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px 0 var(--navy-shadow);
+}
+
+.projects-list-mobile > li .project-content-mobile {
+    z-index: 1;
+}
+
+/* make the image is behind the content */
+.projects-list-mobile > li .project-image-mobile {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* make the image fit .projects-content-mobile */
+.projects-list-mobile > li .project-image-mobile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
 /* FOOTER */
 footer {
     display: flex;
@@ -744,4 +807,35 @@ footer {
     min-height: 70px;
     padding-top: 15px;
     text-align: center;
+}
+
+/** TEMPORARY **/
+.in-construction {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 0;
+}
+
+.in-construction p {
+    margin-top: auto;
+    color: var(--white);
+}
+
+.in-construction a {
+    color: #9b0202;
+}
+
+.in-construction a:hover {
+    color: #9b0202;
+    text-decoration: underline;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+header > div {
+    background-color: rgba(234, 144, 46, 0.85);
 }
